@@ -1,0 +1,329 @@
+/* ================================
+   CSS VARIABLES
+================================ */
+
+:root {
+    --primary-color: #0b2d63;
+    --blue-color: #19b5e6;
+    --light-blue: #dff7ff;
+    --text-color: #777;
+    --white: #ffffff;
+}
+
+
+/* ================================
+   BASIC RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+    width: 90%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 10px;
+}
+
+
+/* Logo */
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* Navigation Links */
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* Username */
+
+.username {
+    background-color: var(--light-blue);
+    color: #159bc9;
+
+    padding: 12px 20px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+    width: 90%;
+    margin: 50px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+
+/* Hero Text */
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    line-height: 1.35;
+    color: var(--primary-color);
+}
+
+.hero-content h1 span {
+    color: var(--blue-color);
+    display: block;
+}
+
+
+.hero-content p {
+    margin-top: 15px;
+
+    max-width: 550px;
+
+    font-size: 18px;
+    line-height: 1.5;
+
+    color: var(--text-color);
+}
+
+
+/* Button */
+
+.hero-content button {
+    margin-top: 30px;
+
+    padding: 18px 35px;
+
+    border: none;
+    border-radius: 12px;
+
+    background-color: var(--blue-color);
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* Image */
+
+.hero-image {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 450px;
+    max-width: 100%;
+}
+
+
+/* ==================================================
+   TABLET VIEW
+   768px - 1024px
+================================================== */
+
+@media screen and (max-width: 1024px) {
+
+    /* Navbar */
+
+    .navbar {
+        width: 90%;
+        padding: 20px 5px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .username {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        width: 90%;
+        gap: 25px;
+        margin-top: 35px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+        line-height: 1.3;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+        line-height: 1.45;
+    }
+
+    .hero-content button {
+        padding: 15px 28px;
+        font-size: 14px;
+    }
+
+    .hero-image img {
+        width: 330px;
+    }
+}
+
+
+/* ==================================================
+   MOBILE VIEW
+   Below 768px
+================================================== */
+
+@media screen and (max-width: 767px) {
+
+    /* ================================
+       MOBILE NAVBAR
+    ================================= */
+
+    .navbar {
+        width: 90%;
+
+        padding: 18px 0;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Hide navigation links */
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .username {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+
+    /* ================================
+       MOBILE HERO
+    ================================= */
+
+    .hero {
+        width: 90%;
+
+        display: flex;
+
+        /* Text first, image below */
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 30px;
+
+        margin: 30px auto;
+    }
+
+
+    /* Mobile heading */
+
+    .hero-content h1 {
+        font-size: 30px;
+        line-height: 1.25;
+    }
+
+
+    /* Mobile paragraph */
+
+    .hero-content p {
+        font-size: 14px;
+        line-height: 1.5;
+
+        margin-top: 12px;
+    }
+
+
+    /* Mobile button */
+
+    .hero-content button {
+        width: 100%;
+
+        padding: 16px 20px;
+
+        margin-top: 20px;
+
+        font-size: 14px;
+    }
+
+
+    /* Mobile image */
+
+    .hero-image {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 320px;
+        max-width: 90%;
+    }
+}
